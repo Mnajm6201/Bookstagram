@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     "mptt",
     "corsheaders",
     "library",
+    "rest_framework",
+    "search"
 ]
 
 # Set custom user model
@@ -63,7 +65,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = False # DO NOT SET TO TRUE FOR PRODUCTION
 CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["http://localhost:3000"])
 
 # specify headers here
